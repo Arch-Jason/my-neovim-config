@@ -218,29 +218,13 @@ call plug#end()
 " \ V /| | | | | | |_____| (_| | | |  | | | | | |  __/
 "  \_/ |_|_| |_| |_|      \__,_|_|_|  |_|_|_| |_|\___|
 "                                                     
-let g:airline_theme="luna" 
+let g:airline_theme="bubblegum" 
 
-"这个是安装字体后 必须设置此项" 
-let g:airline_powerline_fonts = 1   
- 
- "打开tabline功能,方便查看Buffer和切换，这个功能比较不错"
- "我还省去了minibufexpl插件，因为我习惯在1个Tab下用多个buffer"
- let g:airline#extensions#tabline#enabled = 1
- let g:airline#extensions#tabline#buffer_nr_show = 1
-
- "设置切换Buffer快捷键"
+" let g:airline_powerline_fonts = 1   
+let g:airline#extensions#tabline#enabled = 1
+"设置切换Buffer快捷键"
  nnoremap <C-N> :bn<CR>
  nnoremap <C-P> :bp<CR>
-
- " 关闭状态显示空白符号计数,这个对我用处不大"
- let g:airline#extensions#whitespace#enabled = 0
- let g:airline#extensions#whitespace#symbol = '!'
-
-" 在Gvim中我设置了英文用Hermit， 中文使用 YaHei Mono "
-if has('win32')
-  set guifont=Hermit:h13
-  set guifontwide=Microsoft_YaHei_Mono:h12
-endif
 
 " molokai
 "let g:molokai_original = 1
@@ -290,6 +274,7 @@ let g:gruvbox_transp_bg = 1 "透明背景
 " | | | |  __/ | | (_| | |_| | |  __/  __/
 " |_| |_|\___|_|  \__,_|\__|_|  \___|\___|
 "                                         
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "NERDtree open
 map <F5> :NERDTree<CR>
 "NERDtree close

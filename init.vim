@@ -13,10 +13,10 @@
 "< r   t >
 "    s
 "    v
-map f k
-map r h
-map t l
-map s j
+noremap f k
+noremap r h
+noremap t l
+noremap s j
 
 
 
@@ -88,7 +88,6 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
 
-" 设置文内智能搜索提示
 " 高亮search命中的文本
 set hlsearch
 " 打开增量搜索模式,随着键入即时搜索
@@ -190,6 +189,13 @@ map <down> :resize-5<CR>
 map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
 
+"Shift+s save
+map <C-s> :w<CR>
+
+"设置切换Buffer快捷键"
+ nnoremap <C-left> :bn<CR>
+ nnoremap <C-right> :bp<CR>
+
 call plug#begin()
     Plug 'scrooloose/nerdtree'
     Plug 'suan/vim-instant-markdown'
@@ -222,9 +228,6 @@ let g:airline_theme="bubblegum"
 
 " let g:airline_powerline_fonts = 1   
 let g:airline#extensions#tabline#enabled = 1
-"设置切换Buffer快捷键"
- nnoremap <C-N> :bn<CR>
- nnoremap <C-P> :bp<CR>
 
 " molokai
 "let g:molokai_original = 1

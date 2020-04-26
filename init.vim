@@ -36,7 +36,7 @@ map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
 
 "Shift+s save
-map <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>
 
 "切换Buffer"
 nnoremap <C-space> :bn<CR>
@@ -207,6 +207,7 @@ let g:multi_cursor_quit_key='<Esc>'
 " instant-markdown-d
 " ==================
 let g:instant_markdown_mathjax = 1
+let g:instant_markdown_open_to_the_world = 1
 
 
 " ===
@@ -252,12 +253,12 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
-" if has('patch8.1.1068')
-"   " Use `complete_info` if your (Neo)Vim version supports it.
-"   inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-" else
-"   imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" endif
+if has('patch8.1.1068')
+  " Use `complete_info` if your (Neo)Vim version supports it.
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)

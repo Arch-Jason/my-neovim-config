@@ -36,7 +36,7 @@ map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
 
 "Shift+s save
-imap <C-s> <Esc>:w<CR>
+imap <C-s> <Esc>:w<CR>a
 
 "切换Buffer"
 nnoremap <C-space> :bn<CR>

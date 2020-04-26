@@ -20,6 +20,9 @@ noremap r h
 noremap t l
 noremap s j
 
+" k to f
+noremap k f
+
 " use S-s to start the spell check
 map <S-s> :set spell<CR>
 

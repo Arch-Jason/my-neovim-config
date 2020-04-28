@@ -40,6 +40,7 @@ map <right> :vertical resize+5<CR>
 
 "Shift+s save
 imap <C-s> <Esc>:w<CR>a
+map <C-s> :w<CR>
 
 "切换Buffer"
 nnoremap <C-left> :bn<CR>

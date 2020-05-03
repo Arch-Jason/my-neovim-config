@@ -46,6 +46,9 @@ map <C-s> :w<CR>
 nnoremap <C-left> :bn<CR>
 nnoremap <C-right> :bp<CR>
 
+" up and down in wrap
+map <S-f> gk
+map <S-s> gj
 
 " ==========================
 " more comfortable
@@ -141,6 +144,7 @@ call plug#begin()
     Plug 'jiangmiao/auto-pairs'
     Plug 'connorholyday/vim-snazzy'
     Plug 'junegunn/goyo.vim'
+    Plug 'ianva/vim-youdao-translater'
 call plug#end()
 
 
@@ -171,6 +175,9 @@ inoreabbrev <expr> <bar><bar>
 inoreabbrev <expr> __
           \ <SID>isAtStartOfLine('__') ?
           \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+
+" use F1 to start tablemode
+map <F1> :TableModeRealign<CR>
 
 
 " ===============
@@ -213,8 +220,15 @@ let g:multi_cursor_quit_key='<Esc>'
 let g:instant_markdown_mathjax = 1
 let g:instant_markdown_open_to_the_world = 1
 
+" =====================
+" vim-youdao-translater
+" =====================
+vnoremap <silent> <C-T> :<C-u>Ydv<CR>
+nnoremap <silent> <C-T> :<C-u>Ydc<CR>
+noremap <leader>yd :<C-u>Yde<CR>
 
-" ===
+
+"===
 " coc
 " ===
 " TextEdit might fail if hidden is not set.

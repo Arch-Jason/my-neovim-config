@@ -98,9 +98,6 @@ set smartcase
 
 " Smart indent
 set smartindent
-
-" Smart indent
-set smartindent
 " never add copyindent, case error   " copy the previous indentation on autoindenting
 set autoindent
 
@@ -145,6 +142,7 @@ call plug#begin()
     Plug 'connorholyday/vim-snazzy'
     Plug 'junegunn/goyo.vim'
     Plug 'ianva/vim-youdao-translater'
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
@@ -227,6 +225,10 @@ vnoremap <silent> <C-T> :<C-u>Ydv<CR>
 nnoremap <silent> <C-T> :<C-u>Ydc<CR>
 noremap <leader>yd :<C-u>Yde<CR>
 
+"============
+"vim-devicons
+"============
+set encoding=UTF-8
 
 "===
 " coc

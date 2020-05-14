@@ -175,7 +175,7 @@ inoreabbrev <expr> __
           \ '<c-o>:silent! TableModeDisable<cr>' : '__'
 
 " use F1 to start tablemode
-map <F1> :TableModeRealign<CR>
+imap <F1> <esc>:TableModeRealign<CR>A
 
 
 " ===============

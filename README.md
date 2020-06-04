@@ -4,4 +4,4 @@
 
 ### something in the `init.vim` is from the ["k-vim"](https://github.com/wklken/k-vim)
 
-<img src="./show.png" alt="show">
+<img src="https://raw.githubusercontent.com/Arch-Jason/my-neovim-config/master/show.png" alt="show">

@@ -143,6 +143,9 @@ call plug#begin()
     Plug 'junegunn/goyo.vim'
     Plug 'ianva/vim-youdao-translater'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'godlygeek/tabular'
+    Plug 'tpope/vim-markdown'
+    Plug 'joshdick/onedark.vim'
 call plug#end()
 
 
@@ -190,11 +193,14 @@ imap <F1> <esc>:TableModeRealign<CR>A
 ""透明背景
 "let g:gruvbox_transp_bg = 1
 
-colorscheme snazzy
+colorscheme onedark
 
 " ========
 " nerdtree
 " ========
+" start automatically
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 " open
 map <F5> :NERDTree<CR>
 " close

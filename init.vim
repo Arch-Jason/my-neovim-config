@@ -71,6 +71,9 @@ set wildmenu
 
 " set number
 set nu
+set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 " syntx on
 syntax on
 " 突出当前行

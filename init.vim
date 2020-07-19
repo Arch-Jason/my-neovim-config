@@ -149,6 +149,7 @@ call plug#begin()
     Plug 'godlygeek/tabular'
     Plug 'tpope/vim-markdown'
     Plug 'joshdick/onedark.vim'
+    Plug 'vim-scripts/c.vim'
 call plug#end()
 
 

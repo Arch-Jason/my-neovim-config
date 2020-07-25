@@ -246,7 +246,7 @@ set encoding=UTF-8
 "============
 map <F2> :FloatermNew<CR>
 tmap <F3> <C-\><C-n>:FloatermHide<CR>
-tmap <F4> <C-\><C-n>:FloatermShow<CR>
+map <F4> :FloatermShow<CR>
 
 
 "===

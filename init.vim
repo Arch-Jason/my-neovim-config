@@ -150,6 +150,7 @@ call plug#begin()
     Plug 'tpope/vim-markdown'
     Plug 'joshdick/onedark.vim'
     Plug 'vim-scripts/c.vim'
+    Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 
@@ -239,6 +240,14 @@ noremap <leader>yd :<C-u>Yde<CR>
 "vim-devicons
 "============
 set encoding=UTF-8
+
+"============
+"floaterm
+"============
+map <F2> :FloatermNew<CR>
+tmap <F3> <C-\><C-n>:FloatermHide<CR>
+tmap <F4> <C-\><C-n>:FloatermShow<CR>
+
 
 "===
 " coc

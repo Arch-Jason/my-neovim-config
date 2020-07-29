@@ -117,6 +117,13 @@ set expandtab
 
 " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 set scrolloff=7
+
+" set space as leader
+let mapleader = " "
+
+" map run-in-floaterm
+map <F29> :source ~/.config/nvim/run-in-floaterm.vim<CR>
+
 "===========================
 "  plugs
 "===========================
@@ -151,6 +158,7 @@ call plug#begin()
     Plug 'joshdick/onedark.vim'
     Plug 'vim-scripts/c.vim'
     Plug 'voldikss/vim-floaterm'
+    Plug 'voldikss/vim-translator'
 call plug#end()
 
 
@@ -241,15 +249,29 @@ noremap <leader>yd :<C-u>Yde<CR>
 "============
 set encoding=UTF-8
 
-"============
+"========
 "floaterm
-"============
+"========
 map <F2> :FloatermNew<CR>
 tmap <F3> <C-\><C-n>:FloatermHide<CR>
 map <F4> :FloatermShow<CR>
 
+" ==============
+" vim translator
+" ==============
+" Echo translation in the cmdline
+nmap <silent> <Leader>t <Plug>Translate
+vmap <silent> <Leader>t <Plug>TranslateV
+" Display translation in a window
+nmap <silent> <Leader>w <Plug>TranslateW
+vmap <silent> <Leader>w <Plug>TranslateWV
+" Replace the text with translation
+nmap <silent> <Leader>r <Plug>TranslateR
+vmap <silent> <Leader>r <Plug>TranslateRV
+" Translate the text in clipboard
+nmap <silent> <Leader>x <Plug>TranslateX
 
-"===
+" ===
 " coc
 " ===
 " TextEdit might fail if hidden is not set.

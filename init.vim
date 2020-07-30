@@ -135,7 +135,6 @@ call plug#begin()
     Plug 'vim-airline/vim-airline-themes'
     Plug 'tomasr/molokai'
     Plug 'dhruvasagar/vim-table-mode'
-    "Plug 'valloric/youcompleteme'
     Plug 'mattn/emmet-vim'
     Plug 'kien/ctrlp.vim'
     " Plug 'morhetz/gruvbox'
@@ -143,8 +142,6 @@ call plug#begin()
     Plug 'mhinz/vim-startify'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'tpope/vim-commentary'
-    " Plug 'majutsushi/tagbar'
-    " Plug 'vim-scripts/c.vim'
     Plug 'plan9-for-vimspace/acme-colors'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'fatih/vim-go'
@@ -156,7 +153,6 @@ call plug#begin()
     Plug 'godlygeek/tabular'
     Plug 'tpope/vim-markdown'
     Plug 'joshdick/onedark.vim'
-    Plug 'vim-scripts/c.vim'
     Plug 'voldikss/vim-floaterm'
     Plug 'voldikss/vim-translator'
 call plug#end()
